@@ -6,8 +6,8 @@ import './App.css';
 import TextForm from './components/TextForm';
 import { useState } from 'react';
 import Alert from './components/Alert';
-import { BrowserRouter as Router, Switch , Link, Route, Routes} from "react-router-dom";
-import About from './components/About';
+// import { BrowserRouter as Router, Switch , Link, Route, Routes} from "react-router-dom";
+//import About from './components/About';
 
 
 // let name="Shivam";
@@ -53,22 +53,22 @@ const toggleMode=()=>{
     // <><Navbar title="Text Utiles new" abouttext="about"></Navbar></>
     
     <>
-    <Router>
+    {/* <Router> */}
     <Navbar title='Text Utils' abouttext='About us' mode={mode} toggleMode={toggleMode}></Navbar>
     <Alert alert={alert}/>
     <div className="container my-3">
       {/* <About/> */}
       
-      <Routes>
+      {/* <Routes>
         <Route exact path="/About" element={<About/>}>
           
-        </Route>
-        <Route exact path="/" element={<TextForm heading='Convert the text' mode={mode} showAlert={showAlert}/>}>
-           
-        </Route>
-      </Routes>
+        </Route> */}
+        {/* <Route exact path="/" element={<TextForm heading='Convert the text' mode={mode} showAlert={showAlert}/>}> */}
+        <TextForm heading='Convert the text' mode={mode} showAlert={showAlert}/>
+        {/* </Route>
+      </Routes> */}
       </div>
-      </Router>
+      {/* </Router> */}
     {/* <TextForm heading="Enter the text to analyze below"></TextForm> */}
     {/* <About></About> */}
 
