@@ -43,28 +43,30 @@ export class News extends Component {
         this.state={
             articles: this.articles,
             loading: false
-
+            }
         }
-        
+
+    componentDidMount(){
+        console.log("cdn");
+
     }
 
   render() {
 
+    console.log("render");
     return (
       <div>
         This is news component.
+        
         <div className="container my-3">
+        <h2>News Monkey - Quick grasp to news headlines</h2>
             <div className="row">
-                <div className="col-md-4">
-                    <NewsItem style="this is style" description="this is desc" imageUrl="https://www.aljazeera.com/wp-content/uploads/2023/12/2023-11-20T231338Z_1487796443_RC2CG4ABS406_RTRMADP_3_CRICKET-T20-IND-AUS-1702200830-1702205476.jpg?resize=1200%2C630&quality=80" 
-                    newsurl="TODO"></NewsItem>
-                </div>
-                <div className="col-md-4">
-                    <NewsItem style="this is style" description="this is desc"></NewsItem>
-                </div>
-                <div className="col-md-4">
-                    <NewsItem style="this is style" description="this is desc"></NewsItem>
-                </div>
+                {this.state.articles.map((element)=>{
+                    return <div className="col-md-4" key={element.url}>
+                                <NewsItem style={element.title.slice(0,40)} description={element.description.slice(0,80)} imageUrl={element.urlToImage} 
+                                newsurl={element.url}></NewsItem>
+                            </div>
+                    })}
             </div>
         </div>
       </div>
