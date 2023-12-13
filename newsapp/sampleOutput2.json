@@ -1,0 +1,166 @@
+{
+  "status": "ok",
+  "totalResults": 36,
+  "articles": [
+    {
+      "source": { "id": "cnn", "name": "CNN" },
+      "author": "Kaanita Iyer, Katelyn  Polantz, Holmes Lybrand, Devan Cole",
+      "title": "Georgia election workers ask court to warn Rudy Giuliani after he repeats claims judge ruled were defamatory - CNN",
+      "description": "After his first day in a Washington, DC, courtroom where a jury will determine how much he owes two former Georgia election workers for defamation, former Donald Trump election attorney Rudy Giuliani still insists everything he said about the two women was tr…",
+      "url": "https://www.cnn.com/2023/12/11/politics/rudy-giuliani-defamation-trial/index.html",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/ap23277585445824.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2023-12-12T03:20:00Z",
+      "content": "After his first day in a Washington, DC, courtroom where a jury will determine how much he owes two former Georgia election workers for defamation, former Donald Trump election attorney Rudy Giuliani… [+6697 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Space.com" },
+      "author": "Mike Wall",
+      "title": "SpaceX scrubs Falcon Heavy's X-37B space plane launch due to ground issue - Space.com",
+      "description": "The next opportunity could come on Tuesday (Dec. 12).",
+      "url": "https://www.space.com/spacex-falcon-heavy-x-37b-space-force-launch-scrub",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/PBtcrK3tiAsthZTE5UPQ9c-1200-80.jpg",
+      "publishedAt": "2023-12-12T01:27:53Z",
+      "content": "Space is part of Future US Inc, an international media group and leading digital publisher. Visit our corporate site.\r\n©\r\nFuture US, Inc. Full 7th Floor, 130 West 42nd Street,\r\nNew York,\r\nNY 10036."
+    },
+    {
+      "source": { "id": null, "name": "Honolulu Star-Advertiser" },
+      "author": null,
+      "title": "Front Street burn zone reopens to Lahaina residents - Honolulu Star-Advertiser",
+      "description": "The burn zone area along Front Street reopened Monday, Dec. 11, to Lahaina residents and owners with entry passes.",
+      "url": "https://www.staradvertiser.com/2023/12/11/photo-gallery/front-street-reopens-to-lahaina-residents-and-owners-with-entry-passes/",
+      "urlToImage": "https://www.staradvertiser.com/wp-content/uploads/2023/12/AP23346087398349.jpg",
+      "publishedAt": "2023-12-12T00:46:17Z",
+      "content": "Copyright © 2023 StarAdvertiser.com.All rights reserved.\r\n500 Ala Moana Blvd. #7-500Honolulu, HI 96813Telephone: 808-529-4747"
+    },
+    {
+      "source": { "id": "fox-news", "name": "Fox News" },
+      "author": "Bradford Betz",
+      "title": "Supreme Court: Trump must respond to special counsel’s presidential immunity petition before Christmas - Fox News",
+      "description": "The Supreme Court has agreed to expedite this appeal and asked Trump’s lawyers to respond to the motion by next Wednesday December 20",
+      "url": "https://www.foxnews.com/politics/supreme-court-trump-must-respond-special-counsel-presidential-immunity-petition-christmas",
+      "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2023/08/Trump-Smith.jpg",
+      "publishedAt": "2023-12-11T23:19:00Z",
+      "content": "The Supreme Court has indicated it will expedite consideration of a petition by special counsel Jack Smith on whether former President Donald Trump can be prosecuted on charges he plotted to overturn… [+4312 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Newser" },
+      "author": "Bob Cronin",
+      "title": "After Deaths, CDC Issues Disease Alert - Newser",
+      "description": "Five cases were reported of Rocky Mountain spotted fever, three of them fatal",
+      "url": "https://www.newser.com/story/343662/after-deaths-cdc-issues-disease-alert.html",
+      "urlToImage": "https://img2-azrcdn.newser.com/image/1506805-12-20231211172702.jpeg",
+      "publishedAt": "2023-12-11T23:10:00Z",
+      "content": "But the early symptoms—including a low fever, headache, and gastrointestinal discomfort—often don't seem serious or unique, and the disease often isn't diagnosed in time, health officials said. It's … [+860 chars]"
+    },
+    {
+      "source": { "id": "cnn", "name": "CNN" },
+      "author": "Issy Ronald",
+      "title": "Skull of gigantic pliosaur sea monster found on ‘Jurassic Coast’ - CNN",
+      "description": "The skull of a pliosaur, a prehistoric sea monster, was discovered on a beach in Dorset, England, and it could reveal secrets about these awe-inspiring creatures.",
+      "url": "https://www.cnn.com/2023/12/11/world/skull-pliosaur-fossil-documentary-intl-scli-scn/index.html",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/231208194345-02-bbc-pliosaur-sea-monster.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2023-12-11T22:10:00Z",
+      "content": "Sign up for CNNs Wonder Theory science newsletter. Explore the universe with news on fascinating discoveries, scientific advancements and more.\r\nThe remarkably well-preserved skull of a gigantic plio… [+3644 chars]"
+    },
+    {
+      "source": { "id": "axios", "name": "Axios" },
+      "author": "Axios",
+      "title": "Claudine Gay gets show of support from Harvard Alumni Association, faculty - Axios",
+      "description": null,
+      "url": "https://www.axios.com/2023/12/11/claudine-gay-harvard-alumni-faculty-support",
+      "urlToImage": null,
+      "publishedAt": "2023-12-11T22:02:53Z",
+      "content": null
+    },
+    {
+      "source": { "id": "abc-news", "name": "ABC News" },
+      "author": "Bill Hutchinson",
+      "title": "Geminid meteor shower expected to light up US skies this week - ABC News",
+      "description": "\"The forecast looks very favorable,\" said amateur astronomer Bart Fried.",
+      "url": "https://abcnews.go.com/US/geminid-meteor-shower-expected-light-us-skies/story?id=105546240",
+      "urlToImage": "https://i.abcnewsfe.com/a/6d3ac910-5636-4ad6-a8a1-37743a1cfd50/geminid-meteor-shower-gty-lv-231211-2_1702319757396_hpMain_16x9.jpg?w=992",
+      "publishedAt": "2023-12-11T21:59:16Z",
+      "content": "With mostly clear to partly cloudy skies expected over much of the United States, this year's Geminid meteor shower is forecast to offer one of the best cosmic shows in recent years, according to ast… [+2473 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Yahoo Entertainment" },
+      "author": "Life & Style",
+      "title": "New Pictures of Taylor Swift and Travis Kelce Enjoying a Christmas Party Break the Internet - Yahoo Entertainment",
+      "description": "Despite a heartbreaking home loss to the Buffalo Bills on Sunday, December 10, Taylor Swift and boyfriend Travis Kelce quickly got smiles on their faces...",
+      "url": "https://www.yahoo.com/entertainment/pictures-taylor-swift-travis-kelce-191357868.html",
+      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/lG3PMG5fJX1DC5ggfECyEw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD0xMjAw/https://media.zenfs.com/en/life_style_868/1effc642ab82dc7ca4538ed6ff9d7cd0",
+      "publishedAt": "2023-12-11T19:13:57Z",
+      "content": "Despite a heartbreaking home loss to the Buffalo Bills on Sunday, December 10, Taylor Swift and boyfriend Travis Kelce quickly got smiles on their faces heading to a post-game Christmas party where t… [+585 chars]"
+    },
+    {
+      "source": { "id": null, "name": "CNET" },
+      "author": null,
+      "title": "Apple's iMessage Block of Beeper Mini Just Part of Bigger Blue/Green Bubble Saga - CNET",
+      "description": "Apple takes preventative measures to protect its customers. Beeper claims Apple's latest move does just the opposite.",
+      "url": "https://www.cnet.com/tech/mobile/apples-imessage-block-of-beeper-mini-just-part-of-bigger-bluegreen-bubble-saga/",
+      "urlToImage": "https://www.cnet.com/a/img/resize/9a062ab534e401938f4e36fe0c3782797e0e0dd1/hub/2019/11/08/fb22b5a0-75a8-46e2-9247-b3eee66712d5/imessage-iphone-11-pro-max.jpg?auto=webp&fit=crop&height=675&width=1200",
+      "publishedAt": "2023-12-11T18:23:00Z",
+      "content": "In the latest chapter of blue bubbles versus green bubbles, Apple has blocked access to iMessage from credentials masquerading as Apple to protect its customers, the company told CNET on Saturday eve… [+3765 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Yahoo Entertainment" },
+      "author": null,
+      "title": "Argentina's dollar-loving president Javier Milei warns the country to get ready for a painful economic shock - Yahoo Finance",
+      "description": null,
+      "url": "https://finance.yahoo.com/news/argentinas-dollar-loving-president-javier-180916403.html",
+      "urlToImage": null,
+      "publishedAt": "2023-12-11T18:09:16Z",
+      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 241 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Page Six" },
+      "author": "Kristin Contino",
+      "title": "Cardi B switches up her look, shows off pixie haircut amid Offset split - Page Six",
+      "description": "The “WAP” singer made a dramatic hair transformation after announcing her breakup, showing off a short style as she shopped in Los Angeles on Friday.",
+      "url": "https://pagesix.com/2023/12/11/style/cardi-b-switches-up-her-hair-shows-off-pixie-cut-amid-offset-split/",
+      "urlToImage": "https://pagesix.com/wp-content/uploads/sites/3/2023/12/73589418-1.jpg?quality=75&strip=all&w=1024",
+      "publishedAt": "2023-12-11T16:56:00Z",
+      "content": "Single looks good on her.\r\nCardi B showed off a fresh new look as she headed out shopping in Los Angeles on Friday, with the “WAP” singer rocking a pixie haircut amid the news that she’s broken up wi… [+1923 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Forbes" },
+      "author": "Robert Hart",
+      "title": "What To Know About Anthrax As WHO Warns Of Growing Outbreaks In Africa - Forbes",
+      "description": "Outbreaks of anthrax, considered a likely candidate for a bioterrorist attack, have surged in African countries like Zambia and Kenya and the WHO warns the deadly disease could spread further.",
+      "url": "https://www.forbes.com/sites/roberthart/2023/12/11/what-to-know-about-anthrax-as-who-warns-of-growing-outbreaks-in-africa/",
+      "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/65773a8ca68b0eb05ca7becf/0x0.jpg?format=jpg&crop=4698,2642,x0,y196,safe&height=900&width=1600&fit=bounds",
+      "publishedAt": "2023-12-11T16:38:09Z",
+      "content": "Anthraxa bacterial disease with dangerous potential as a biological or bioterrorist weaponis spreading at an alarming rate in Zambia and a handful of nearby African countries, the World Health Organi… [+4966 chars]"
+    },
+    {
+      "source": { "id": null, "name": "9to5google.com" },
+      "author": "Ben Schoon",
+      "title": "Google Chrome will let you create themes using AI - 9to5Google",
+      "description": "A new feature in Google Chrome will let users generate themes using AI tools, but it's not live yet, and we don't know when it will arrive.",
+      "url": "https://9to5google.com/2023/12/11/google-chrome-themes-ai-generate/",
+      "urlToImage": "https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2023/03/google-chrome-logo-1.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-12-11T14:20:00Z",
+      "content": "Generative AI has taken the world, and Google’s products by storm over the past year. Now, Google Chrome is preparing a new feature that creates custom themes for the browser using AI.\r\nGoogle Chrome… [+1673 chars]"
+    },
+    {
+      "source": { "id": "financial-times", "name": "Financial Times" },
+      "author": null,
+      "title": "Letter: Big five oil groups offer clues to ESG backlash - Financial Times",
+      "description": "From Myriam Vander Stichele, Senior Researcher, SOMO, Amsterdam, The Netherlands",
+      "url": "https://www.ft.com/content/1d6975ab-cb3c-421b-ab61-ae13e0104845",
+      "urlToImage": null,
+      "publishedAt": "2023-12-11T00:23:47Z",
+      "content": "Keep abreast of significant corporate, financial and political developments around the world. Stay informed and spot emerging risks and opportunities with independent global reporting, expert comment… [+30 chars]"
+    },
+    {
+      "source": { "id": null, "name": "PBS" },
+      "author": null,
+      "title": "What to know about COVID, RSV and flu vaccines this winter - PBS NewsHour",
+      "description": "As we head into the winter holidays, John Yang speaks with epidemiologist Katelyn Jetelina about the current state of affairs with COVID, RSV and flu infections, lagging vaccination rates and how to stay healthy this season.",
+      "url": "https://www.pbs.org/newshour/show/your-questions-answered-about-staying-safe-from-covid-rsv-and-flu-this-winter",
+      "urlToImage": "https://d3i6fh83elv35t.cloudfront.net/static/2023/12/SickSeason-1024x683.jpg",
+      "publishedAt": "2023-12-10T22:40:32Z",
+      "content": "As we head into the winter holidays, John Yang speaks with epidemiologist Katelyn Jetelina about the current state of affairs with COVID, RSV and flu infections, lagging vaccination rates and how to … [+24 chars]"
+    }
+  ]
+}
