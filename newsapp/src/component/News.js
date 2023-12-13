@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import NewsItem from './NewsItem'
+import Spinner from './Spinner';
 
 export class News extends Component {
 
@@ -51,44 +52,52 @@ export class News extends Component {
 
     async componentDidMount(){
         console.log("cdn");
-        let url="https://newsapi.org/v2/top-headlines?country=us&apiKey=675a005308624f3e8a7574053ef15b95&page=1&pageSize=20";
+        let url=`https://newsapi.org/v2/top-headlines?country=us&apiKey=675a005308624f3e8a7574053ef15b95&page=1&pageSize=${this.props.pageSize}`;
+        this.setState({
+          loading:true
+        })
         let article=await fetch(url);
         let parseddata=await article.json();
         console.log(parseddata);
         this.setState(
             {articles:parseddata.articles,
-            totalResults:parseddata.totalResults})
+            totalResults:parseddata.totalResults,
+          loading:false})
     }
 
     handleprevclick= async()=>{
         console.log("prev");
-        let url=`https://newsapi.org/v2/top-headlines?country=us&apiKey=675a005308624f3e8a7574053ef15b95&page=${this.state.page-1}&pageSize=20`;
+        let url=`https://newsapi.org/v2/top-headlines?country=us&apiKey=675a005308624f3e8a7574053ef15b95&page=${this.state.page-1}&pageSize=${this.props.pageSize}`;
+        this.setState({
+          loading:true
+        })
         let article=await fetch(url);
         let parseddata=await article.json();
         console.log(parseddata);
         this.setState({
             articles:parseddata.articles,
-            page:this.state.page-1
+            page:this.state.page-1,
+            loading:false
         })
 
     }
 
 
     handlenextclick = async ()=>{
-        if ( this.state.page+1 > Math.ceil(this.state.totalResults/20))
-        {
-
-        }
-        else
+        if ( !(this.state.page+1 > Math.ceil(this.state.totalResults/this.props.pageSize)))
         {
             console.log("next");
-            let url=`https://newsapi.org/v2/top-headlines?country=us&apiKey=675a005308624f3e8a7574053ef15b95&page=${this.state.page + 1}&pageSize=20`;
+            let url=`https://newsapi.org/v2/top-headlines?country=us&apiKey=675a005308624f3e8a7574053ef15b95&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
+            this.setState({
+              loading:true
+            })
             let article=await fetch(url);
             let parseddata=await article.json();
             console.log(parseddata);
             this.setState({
             page:this.state.page+1,
-            articles:parseddata.articles
+            articles:parseddata.articles,
+            loading:false
         })
         }
     }
@@ -101,9 +110,10 @@ export class News extends Component {
         This is news component.
         
         <div className="container my-3">
-        <h2>News Monkey - Quick grasp to news headlines</h2>
+            <h1 className="text-center">News Monkey - Quick grasp to news headlines</h1>
+            {this.state.loading &&  <Spinner></Spinner>}
             <div className="row">
-                {this.state.articles.map((element)=>{
+                {!this.state.loading && this.state.articles.map((element)=>{
                     return <div className="col-md-4" key={element.url}>
                                 <NewsItem style={element.title?element.title:""} description={element.description?element.description:""} imageUrl={element.urlToImage} 
                                 newsurl={element.url}></NewsItem>
@@ -114,7 +124,7 @@ export class News extends Component {
 
         <div className="container d-flex justify-content-between">
         <button type="button" className="btn btn-dark" disabled={this.state.page<=1} onClick={this.handleprevclick}>&#8249; Previous</button>
-        <button type="button" className="btn btn-dark" onClick={this.handlenextclick}>Next &#8250;</button>
+        <button type="button" className="btn btn-dark" disabled={this.state.page+1 > Math.ceil(this.state.totalResults/this.props.pageSize)} onClick={this.handlenextclick}>Next &#8250;</button>
         </div>
       </div>
     )
