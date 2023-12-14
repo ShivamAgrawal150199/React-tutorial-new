@@ -12,6 +12,7 @@ import {
 
 export default class App extends Component {
   c='john';
+  pageSize=15
   render() {
     return (
       <div>
@@ -23,13 +24,13 @@ export default class App extends Component {
           <Routes>
 
 
-            <Route exact path='/' element={<News key='general' category='general'></News>}></Route>
-            <Route exact path='/business' element={<News key='business' category='business'></News>}></Route>
-            <Route exact path='/entertainment' element={<News key='entertainment' category='entertainment'></News>}></Route>
-            <Route exact path='/health' element={<News key='health' category='health'></News>}></Route>
-            <Route exact path='/science' element={<News key='science' category='science'></News>}></Route>
-            <Route exact path='/sports' element={<News key='sports' category='sports'></News>}></Route>
-            <Route exact path='/technology' element={<News key='technology' category='technology'></News>}></Route>
+            <Route exact path='/' element={<News key='general' category='general' pageSize={this.pageSize}></News>}></Route>
+            <Route exact path='/business' element={<News key='business' category='business' pageSize={this.pageSize}></News>}></Route>
+            <Route exact path='/entertainment' element={<News key='entertainment' category='entertainment' pageSize={this.pageSize}></News>}></Route>
+            <Route exact path='/health' element={<News key='health' category='health' pageSize={this.pageSize}></News>}></Route>
+            <Route exact path='/science' element={<News key='science' category='science' pageSize={this.pageSize}></News>}></Route>
+            <Route exact path='/sports' element={<News key='sports' category='sports' pageSize={this.pageSize}></News>}></Route>
+            <Route exact path='/technology' element={<News key='technology' category='technology' pageSize={this.pageSize}></News>}></Route>
             
 
         
