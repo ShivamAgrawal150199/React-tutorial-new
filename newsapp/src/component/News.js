@@ -47,7 +47,7 @@ const News =(props)=> {                                // FUNCTION BASED COMPONE
   const[loading, setLoading]=useState(true)
   const[page, setPage]=useState(1)
   const[totalResults, setTotalResults]=useState(0)
-  //document.title = `${this.capitalizefirstletter(props.category)} - NewsMonkey`;
+  //document.title = `${this.capitalizefirstletter(props.category)} - NewsMonkey`;  -- moved inside use effect 
   
 
 
@@ -97,13 +97,15 @@ const News =(props)=> {                                // FUNCTION BASED COMPONE
   }
   
   const fetchMoreData= async()=>{
-    setPage(page+1)
+    
     // this.setState({
     //   page:this.state.page+1
     // })
 
-    const url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
-      // this.setState({
+    const url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page+1}&pageSize=${props.pageSize}`;
+    setPage(page+1)
+    // setLoading(true) 
+    // this.setState({
       //   loading:true
       // })
       let article=await fetch(url);
@@ -118,8 +120,9 @@ const News =(props)=> {                                // FUNCTION BASED COMPONE
       //   loading:false})
   }
 
-  useEffect(()=>{                   // work done by component did mount is done by useeffect
+  useEffect(()=>{                   // work done by componentDidMount is done by useeffect
      updatenews();
+     document.title = `${capitalizefirstletter(props.category)} - NewsMonkey`;
   },[])
 
   // async componentDidMount(){
@@ -205,7 +208,7 @@ const News =(props)=> {                                // FUNCTION BASED COMPONE
       This is news component.
       
       <div className="container my-3">
-          <h1 className="text-center" style={{margin:'35 px 0px'}}>News Monkey- Top {props.category} headlines</h1>
+          <h1 className="text-center" style={{margin:'35 px 0px', marginTop: '80px'}}>News Monkey- Top {props.category} headlines</h1>
           {loading &&  <Spinner></Spinner>}
 
           <InfiniteScroll
