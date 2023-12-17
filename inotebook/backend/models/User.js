@@ -23,5 +23,5 @@ const UserSchema = new Schema({
   });
 
   const User=mongoose.model('user',UserSchema);
-  User.createIndexes();
+//   User.createIndexes();       // created for checking dulicate email id present or not.
   module.exports=User ;
