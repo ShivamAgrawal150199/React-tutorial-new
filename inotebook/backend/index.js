@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
 })
 
 //available routes
+app.use(express.json());                      // middle ware to read content from request ( input json)
 
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/notes',require('./routes/notes'))
