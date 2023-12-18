@@ -4,8 +4,9 @@ const router= express.Router();
 const { query, validationResult, body } = require('express-validator');
 const bcrypt = require('bcryptjs');        // bcrypt for passowrd hashing and salt pepper
 var jwt = require('jsonwebtoken');            // generating token to be send to client on authorization
+const fetchuser=require('../middleware/fetchuser')
 
-// create a user using post /api/auth/createuser. No login required
+// Route 1 : create a user using post /api/auth/createuser. No login required
 
 const JWT_SECRET='iamshivamagrawal$';
 router.post('/createuser',[
@@ -71,7 +72,7 @@ router.post('/createuser',[
 })
 
 
-// authenticate using post /api/auth/login. No login required
+// Route 2 : authenticate using post /api/auth/login. No login required
 router.post('/login',[
     body('email','Enter a valid email').isEmail(),
     body('password','Password cannot be blank').exists()
@@ -114,6 +115,18 @@ router.post('/login',[
     })
 
     
+// Route 3 : authenticate using post /api/auth/getuser.  login required
+router.post('/getuser',fetchuser,async (req,res)=>{
+try {
+    userid=req.user.id;
+    const user=await User.findById(userid).select("-password");                  // findbyid is an asynchronous function
+    res.send(user);
 
+} catch (error) {
+    console.log(error.message);
+        res.status(500).json({"error":"internal server error occured"});
+}
+
+})
 
 module.exports=router;
