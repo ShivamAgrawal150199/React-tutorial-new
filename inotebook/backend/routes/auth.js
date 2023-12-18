@@ -26,7 +26,6 @@ router.post('/createuser',[
         return res.status(400).json({errors:errors.array()});
     }
     try{
-
     
     let user=await User.findOne({email:req.body.email});
     console.log(user);
@@ -70,5 +69,51 @@ router.post('/createuser',[
     
 
 })
+
+
+// authenticate using post /api/auth/login. No login required
+router.post('/login',[
+    body('email','Enter a valid email').isEmail(),
+    body('password','Password cannot be blank').exists()
+    ],async (req,res)=>{
+    
+    
+    // if there are errors then show bad request with errors
+    const errors=validationResult(req);
+    if(!errors.isEmpty())
+    {
+        return res.status(400).json({errors:errors.array()});
+    }
+
+    const {email, password}=req.body;
+    try {
+        const user=await User.findOne({email});
+        if(!user)
+        {
+            return res.status(400).json({error:"please logn with correct credentials"});
+        }
+        const passwordmatch=await bcrypt.compare(password,user.password);
+        if(!passwordmatch)
+        {
+            return res.status(400).json({error:"please login with correct credentials"});
+        }
+        const data={
+            user:{
+                id:user.id
+            }
+        }
+        const authtoken=jwt.sign(data,JWT_SECRET);
+        console.log(authtoken);
+        res.json({authtoken});
+
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).json({"error":"internal server error occured"});
+    }
+
+    })
+
+    
+
 
 module.exports=router;
