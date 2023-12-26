@@ -13,7 +13,52 @@ const NoteState=(props)=>{
           "tag": "tag 1",
           "date": "2023-12-19T11:31:49.115Z",
           "__v": 0
-        }
+        },
+        {
+            "_id": "65817f25cdb8c29053db1e23",
+            "user": "6580672398cc5c56882c46ad",
+            "title": "my first note",
+            "description": "this is first description",
+            "tag": "tag 1",
+            "date": "2023-12-19T11:31:49.115Z",
+            "__v": 0
+          },
+          {
+            "_id": "65817f25cdb8c29053db1e23",
+            "user": "6580672398cc5c56882c46ad",
+            "title": "my first note",
+            "description": "this is first description",
+            "tag": "tag 1",
+            "date": "2023-12-19T11:31:49.115Z",
+            "__v": 0
+          },
+          {
+              "_id": "65817f25cdb8c29053db1e23",
+              "user": "6580672398cc5c56882c46ad",
+              "title": "my first note",
+              "description": "this is first description",
+              "tag": "tag 1",
+              "date": "2023-12-19T11:31:49.115Z",
+              "__v": 0
+            },
+            {
+                "_id": "65817f25cdb8c29053db1e23",
+                "user": "6580672398cc5c56882c46ad",
+                "title": "my first note",
+                "description": "this is first description",
+                "tag": "tag 1",
+                "date": "2023-12-19T11:31:49.115Z",
+                "__v": 0
+              },
+              {
+                  "_id": "65817f25cdb8c29053db1e23",
+                  "user": "6580672398cc5c56882c46ad",
+                  "title": "my first note",
+                  "description": "this is first description",
+                  "tag": "tag 1",
+                  "date": "2023-12-19T11:31:49.115Z",
+                  "__v": 0
+                }
       ]
 
       const[notes,setNotes]=useState(notesinitial);
