@@ -1,34 +1,26 @@
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Route,
-   Routes
-} from "react-router-dom";
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Home from './components/Home';
-import NoteState from './context/notes/NoteState';
-
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Home from "./components/Home";
+import NoteState from "./context/notes/NoteState";
 
 function App() {
   return (
     <>
-    <NoteState>
-    <Router>
-    <Navbar/>
-      <h1>This is iNotebook</h1>
-      <Routes>
-          <Route exact path="/" element=<Home/>>
-          </Route>
+      <NoteState>
+        <Router>
+          <Navbar />
+          <div className="container my-3">
+            <h1>This is iNotebook</h1>
+            <Routes>
+              <Route exact path="/" element=<Home />></Route>
 
-          <Route exact path="/about" element=<About/>>
-          </Route>
-          
-          
-      </Routes>
-      </Router>
+              <Route exact path="/about" element=<About />></Route>
+            </Routes>
+          </div>
+        </Router>
       </NoteState>
-
     </>
   );
 }
