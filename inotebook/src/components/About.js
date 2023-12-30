@@ -6,7 +6,7 @@ const About = () => {
   
   const a = useContext(noteContext)
   useEffect(()=>{
-    a.update()
+    // a.update()
     // eslint-disable-next-line
   },[])
 
@@ -15,7 +15,8 @@ const About = () => {
 
     
     <div>
-      This is About {a.state.name} and he is in class {a.state.class}
+      {/* This is About {a.state.name} and he is in class {a.state.class} for understanding only */}
+      This is About
     </div>
   )
 }
