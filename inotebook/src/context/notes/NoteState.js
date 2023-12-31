@@ -146,8 +146,26 @@ const NoteState = (props) => {
   };
 
   // DELETE A NOTE
-  const deleteNote = (id) => {
+  const deleteNote = async (id) => {
     // to do api call
+    const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
+      method: "DELETE", // *GET, POST, PUT, DELETE, etc.
+      // mode: "cors", // no-cors, *cors, same-origin
+      // cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      // credentials: "same-origin", // include, *same-origin, omit
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token":
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjU4MDY3MjM5OGNjNWM1Njg4MmM0NmFkIn0sImlhdCI6MTcwMjk4MjQyNn0.7rVFtUBnTs0rV3qf7r7XWz1xX65pWzzLABBhDyi7hlY",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      // redirect: "follow", // manual, *follow, error
+      // referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      //body: JSON.stringify({title,description,tag}), // body data type must match "Content-Type" header
+    });
+    const json = response.json(); // parses JSON response into native JavaScript objects
+    console.log(json);
+
     console.log("deleting note with id " + id);
     const newnote = notes.filter((note) => {
       return note._id !== id;
