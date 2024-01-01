@@ -98,19 +98,19 @@ const NoteState = (props) => {
       // referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       body: JSON.stringify({title,description,tag}), // body data type must match "Content-Type" header
     });
-    const json = await response.json(); // parses JSON response into native JavaScript objects
-    console.log(json);
+    const note = await response.json(); // parses JSON response into native JavaScript objects
+    console.log(note);
 
     console.log("adding a new note");
-    const note = {
-      _id: "65817f25cdb8c29053db1e2356",
-      user: "6580672398cc5c56882c46ad",
-      title: title,
-      description: description,
-      tag: tag,
-      date: "2023-12-19T11:31:49.115Z",
-      __v: 0,
-    };
+    // const note = {
+    //   _id: "65817f25cdb8c29053db1e2356",
+    //   user: "6580672398cc5c56882c46ad",
+    //   title: title,
+    //   description: description,
+    //   tag: tag,
+    //   date: "2023-12-19T11:31:49.115Z",
+    //   __v: 0,
+    // };
     setNotes(notes.concat(note));
   };
 
