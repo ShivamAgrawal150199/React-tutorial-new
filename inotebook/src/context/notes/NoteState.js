@@ -98,7 +98,8 @@ const NoteState = (props) => {
       // referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       body: JSON.stringify({title,description,tag}), // body data type must match "Content-Type" header
     });
-    const json = response.json(); // parses JSON response into native JavaScript objects
+    const json = await response.json(); // parses JSON response into native JavaScript objects
+    console.log(json);
 
     console.log("adding a new note");
     const note = {
@@ -118,7 +119,7 @@ const NoteState = (props) => {
   const editNote = async (id, title, description, tag) => {
     // API CALL
     const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      method: "PUT", // *GET, POST, PUT, DELETE, etc.
       // mode: "cors", // no-cors, *cors, same-origin
       // cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
       // credentials: "same-origin", // include, *same-origin, omit
@@ -132,17 +133,21 @@ const NoteState = (props) => {
       // referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       body: JSON.stringify({title,description,tag}), // body data type must match "Content-Type" header
     });
-    const json = response.json(); // parses JSON response into native JavaScript objects
+    const json = await response.json(); // parses JSON response into native JavaScript objects
+    console.log(json)
 
-    // Editing in client
-    for (let index = 0; index < notes.length; index++) {
-      const element = notes[index];
+    // logic for Editing in client
+    const newNotes=await JSON.parse(JSON.stringify(notes));
+    for (let index = 0; index < newNotes.length; index++) {
+      const element = newNotes[index];
       if (element._id === id) {
-        element.title = title;
-        element.description = description;
-        element.tag = tag;
+        newNotes[index].title = title;
+        newNotes[index].description = description;
+        newNotes[index].tag = tag;
+        break;
       }
     }
+    setNotes(newNotes);
   };
 
   // DELETE A NOTE
@@ -163,7 +168,7 @@ const NoteState = (props) => {
       // referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       //body: JSON.stringify({title,description,tag}), // body data type must match "Content-Type" header
     });
-    const json = response.json(); // parses JSON response into native JavaScript objects
+    const json = await response.json(); // parses JSON response into native JavaScript objects
     console.log(json);
 
     console.log("deleting note with id " + id);
@@ -191,7 +196,7 @@ const NoteState = (props) => {
   // }
 
   return (
-    <NoteContext.Provider value={{ notes, setNotes, addNote, deleteNote , getNote}}>
+    <NoteContext.Provider value={{ notes, setNotes, addNote, deleteNote , getNote ,editNote}}>
       {props.children}
     </NoteContext.Provider>
   );

@@ -7,26 +7,30 @@ import AddNote from "./AddNote";
 
 const Notes = () => {
   const context = useContext(noteContext);
-  const { notes, setNotes, addNote,getNote } = context;
+  const { notes, setNotes, addNote,getNote, editNote } = context;
   useEffect(()=>{
     getNote()
     // eslint-disable-next-line
   },[])
 
  
-  const[note, setNote]=useState({title:"",description:"",tag:"default"});
+  const[note, setNote]=useState({id:"",title:"",description:"",tag:"default"});
 
   const updateNote=(currentNote)=>{
     ref.current.click()
-    setNote({etitle:currentNote.title, edescription:currentNote.description, etag:currentNote.tag})
+    setNote({id:currentNote._id,etitle:currentNote.title, edescription:currentNote.description, etag:currentNote.tag})
   }
 
   const ref=useRef(null);
+  const refclose=useRef(null);
+
 
   const handleClick=(e)=>{
-    e.preventDefault();
+    //e.preventDefault();  no need as update button is out of form tag
     console.log("updating note ",note)
-    addNote(note.title,note.description,note.tag)
+    editNote(note.id, note.etitle , note.edescription , note.etag);
+    refclose.current.click();
+    //addNote(note.title,note.description,note.tag)
   }
 
   const onchange=(e)=>{
@@ -81,13 +85,13 @@ const Notes = () => {
             Check me out
           </label>
         </div> */}
-        <button type="submit" className="btn btn-primary" onClick={handleClick}>
+        {/* <button type="submit" className="btn btn-primary" onClick={handleClick}>
           Add Note
-        </button>
+        </button> */}
       </form>
       </div>
       <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button ref={refclose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" onClick={handleClick} className="btn btn-primary">Update note</button>
       </div>
     </div>
