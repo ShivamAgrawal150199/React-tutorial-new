@@ -21,17 +21,19 @@ router.post('/createuser',[
     // res.json(obj);
 
     // if there are errors then show bad request with errors
+    let success=false;
+
     const errors=validationResult(req);
     if(!errors.isEmpty())
     {
-        return res.status(400).json({errors:errors.array()});
+        return res.status(400).json({success,errors:errors.array()});
     }
     try{
     
     let user=await User.findOne({email:req.body.email});
     console.log(user);
     if (user){
-        return res.status(400).json({"error":"The user already exists with this email id so cannot add"});
+        return res.status(400).json({success,"error":"The user already exists with this email id so cannot add"});
     }
     const salt=await bcrypt.genSalt(10);
     const secpassword= await bcrypt.hash(req.body.password,salt);
@@ -54,13 +56,13 @@ router.post('/createuser',[
         // .catch(err=>{console.log(err) 
         // res.json({"error":"please enter a unique value", "message":err.message})});
         //res.json(user);  // now not sending users data instead sending authtoken
-
-        res.json({authtoken});  // as we are using ES6 so need to write  res.json({"authtoken":authtoken})
+        success=true;
+        res.json({success,authtoken});  // as we are using ES6 so need to write  res.json({"authtoken":authtoken})
         console.log(req.body);
     }
     catch(error){
         console.log(error.message);
-        res.status(500).json({"error":"some error occured"});
+        res.status(500).json({success,"error":"some error occured"});
     }
 
     // res.send("hello");
