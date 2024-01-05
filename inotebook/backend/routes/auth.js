@@ -80,10 +80,11 @@ router.post('/login',[
     
     
     // if there are errors then show bad request with errors
+    let success=false;
     const errors=validationResult(req);
     if(!errors.isEmpty())
     {
-        return res.status(400).json({errors:errors.array()});
+        return res.status(400).json({"success":success,errors:errors.array()});
     }
 
     const {email, password}=req.body;
@@ -91,12 +92,12 @@ router.post('/login',[
         const user=await User.findOne({email});
         if(!user)
         {
-            return res.status(400).json({error:"please logn with correct credentials"});
+            return res.status(400).json({"success":success,error:"please logn with correct credentials"});
         }
         const passwordmatch=await bcrypt.compare(password,user.password);
         if(!passwordmatch)
         {
-            return res.status(400).json({error:"please login with correct credentials"});
+            return res.status(400).json({success,error:"please login with correct credentials"});
         }
         const data={
             user:{
@@ -105,11 +106,12 @@ router.post('/login',[
         }
         const authtoken=jwt.sign(data,JWT_SECRET);
         console.log(authtoken);
-        res.json({authtoken});
+        success=true;
+        res.json({success,authtoken});
 
     } catch (error) {
         console.log(error.message);
-        res.status(500).json({"error":"internal server error occured"});
+        res.status(500).json({"success":success,"error":"internal server error occured"});
     }
 
     })
