@@ -29,8 +29,8 @@ function App() {
           <Navbar />
           <Alert alert={alert}/>
           <Alert message="This is amazing react course"/>
-          <div className="container my-3">
-            <h1>This is iNotebook</h1>
+          <div className="container">
+            {/* <h1>This is iNotebook</h1> */}
             <Routes>
               <Route exact path="/" element=<Home showAlert={showAlert}/>></Route>
 

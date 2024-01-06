@@ -3,13 +3,24 @@ import { useContext } from "react";
 import noteContext from "../context/notes/noteContext";
 import Noteitem from "./Noteitem";
 import AddNote from "./AddNote";
+import { useNavigate } from "react-router-dom";
 
 
 const Notes = (props) => {
   const context = useContext(noteContext);
+  let navigate=useNavigate();
   const { notes, setNotes, addNote,getNote, editNote } = context;
   useEffect(()=>{
-    getNote()
+    if(localStorage.getItem('token'))
+    {
+      console.log("i am here" , localStorage.getItem('token'));
+      getNote()
+    }
+    else
+    {
+      navigate("/login")
+    }
+    
     // eslint-disable-next-line
   },[])
 
